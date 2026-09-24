@@ -16,7 +16,7 @@ public class OrderApp {
         System.out.println("Client : " + secondCustomerName);
         System.out.println("Prix HT : " + secondUnitPrice);
 
-        System.out.println("Quantité : " + secondQuantity);
+        System.out.println("Quantité : " + secondQuantity); 
         System.out.println("Total TTC : " + secondTotalWithVal);
         System.out.println("------------------------");
         if (firstTotalWithVal + secondTotalWithVal > 30) {
