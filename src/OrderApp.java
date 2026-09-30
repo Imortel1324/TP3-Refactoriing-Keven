@@ -1,10 +1,12 @@
 public class OrderApp {
 
+
     static double computeTotalWithVat(double unitPrice, int quantity) {
         return unitPrice * quantity + unitPrice * quantity * 0.2;
     }
 
-    static double printRecu( String nom, double prix, int quantite){
+    //Fonction qui formate l'affichage d'un reçu.
+    static double printRecu(String nom, double prix, int quantite) {
 
         double tot = computeTotalWithVat(prix, quantite);
         System.out.println("Client : " + nom);
@@ -16,20 +18,27 @@ public class OrderApp {
         return tot;
     }
 
-    
     public static void main(String[] args) {
         String firstCustomerName = "Alice";
         double firstUnitPrice = 10;
         int firstQuantity = 2;
-        
+
         String secondCustomerName = "Bob";
         double secondUnitPrice = 15;
         int secondQuantity = 1;
 
         double firstTotalWithVal = printRecu(firstCustomerName, firstUnitPrice, firstQuantity);
         double secondTotalWithVal = printRecu(secondCustomerName, secondUnitPrice, secondQuantity);
-        
+
         double totalOrders = firstTotalWithVal + secondTotalWithVal;
+
+        /**
+         * Calcule le montant TTC d'une commande à partir du prix HT et de la quantité.
+         *
+         * @param unitPrice prix unitaire hors taxe
+         * @param quantity  nombre d'articles
+         * @return montant TTC (TVA 20 % incluse)
+         */
 
         if (totalOrders > 30) {
             System.out.println("Réduction !");
