@@ -1,11 +1,10 @@
 public class OrderApp {
 
-
     static double computeTotalWithVat(double unitPrice, int quantity) {
         return unitPrice * quantity + unitPrice * quantity * 0.2;
     }
 
-    //Fonction qui formate l'affichage d'un reçu.
+    // Fonction qui formate l'affichage d'un reçu.
     static double printRecu(String nom, double prix, int quantite) {
 
         double tot = computeTotalWithVat(prix, quantite);
@@ -42,12 +41,11 @@ public class OrderApp {
 
         if (totalOrders > 30) {
             System.out.println("Réduction !");
+        } else if (totalOrders > 20) {
+            System.out.println("Petite réduction !");
         } else {
-            if (totalOrders > 20) {
-                System.out.println("Petite réduction !");
-            } else {
-                System.out.println("Pas de réduction.");
-            }
+            System.out.println("Pas de réduction.");
         }
+
     }
 }
