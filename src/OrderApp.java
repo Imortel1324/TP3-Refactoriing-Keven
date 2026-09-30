@@ -29,10 +29,12 @@ public class OrderApp {
         double firstTotalWithVal = printRecu(firstCustomerName, firstUnitPrice, firstQuantity);
         double secondTotalWithVal = printRecu(secondCustomerName, secondUnitPrice, secondQuantity);
         
-        if (firstTotalWithVal + secondTotalWithVal > 30) {
+        double totalOrders = firstTotalWithVal + secondTotalWithVal;
+
+        if (totalOrders > 30) {
             System.out.println("Réduction !");
         } else {
-            if (firstTotalWithVal + secondTotalWithVal > 20) {
+            if (totalOrders > 20) {
                 System.out.println("Petite réduction !");
             } else {
                 System.out.println("Pas de réduction.");
